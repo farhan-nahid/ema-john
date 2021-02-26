@@ -1,0 +1,33 @@
+.product {
+  display: flex;
+  border-bottom: 2px solid gray;
+}
+
+.product-img {
+  margin: 30px;
+}
+
+.product-content {
+  margin: 30px;
+}
+
+.product-content a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.product-content p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cart-btn {
+  background-color: rgba(116, 118, 218, 0.753);
+  color: azure;
+  border: none;
+  width: 150px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}

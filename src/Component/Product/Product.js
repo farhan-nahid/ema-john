@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './Product.css';
 
 const Product = (props) => {
-    console.log(props.product);
+ //   console.log(props.product);
    const {name,img,seller,price,stock,key}=props.product
     return (
         <div className="product">
@@ -13,7 +13,7 @@ const Product = (props) => {
                 <img src={img} alt=""/>
             </div>
             <div className="product-content">
-                  <a href={name}><Link  to={"/product/"+key}>{name} </Link></a>
+                  <h5 href={name}><Link  to={"/product/"+key}>{name} </Link></h5>
                   <p>by: {seller}</p>
                   <h3>${price}</h3>
                   <p>only {stock} left in stock - order soon</p>

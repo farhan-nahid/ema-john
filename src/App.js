@@ -7,9 +7,11 @@ import {
 import './App.css';
 import Header from './Component/Header/Header';
 import Inventory from './Component/Inventory/Inventory';
+import Login from './Component/Login/Login';
 import NotFound from './Component/NotFound/NotFound';
 import ProductDetails from './Component/ProductDetails/ProductDetails';
 import Review from './Component/Review/Review';
+import Shipment from './Component/Shipment/Shipment';
 import Shop from './Component/Shop/Shop';
 
 
@@ -30,6 +32,12 @@ function App() {
             </Route>
             <Route path="/inventory">
               <Inventory></Inventory>
+            </Route>
+            <Route path="/shipment">
+              <Shipment />
+            </Route>
+            <Route path="/login">
+              <Login />
             </Route>
             <Route  path="/product/:productKey">
                 <ProductDetails></ProductDetails>

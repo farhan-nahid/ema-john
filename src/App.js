@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import {
   BrowserRouter as Router,
 
@@ -14,13 +14,14 @@ import Review from './Component/Review/Review';
 import Shipment from './Component/Shipment/Shipment';
 import Shop from './Component/Shop/Shop';
 
-
+export const userContext = createContext()
 
 function App() {
-  
+  const [loggedInUser ,  setLoggedInUser] = useState({})
   return (
     
-    <div>
+    <userContext.Provider value = {[loggedInUser ,  setLoggedInUser]}>
+      <h3>Email : {loggedInUser.email}</h3>
       <Header></Header>
       <Router>
         <Switch>
@@ -50,9 +51,7 @@ function App() {
             </Route>
         </Switch>
       </Router>
-      
-      
-    </div>
+    </userContext.Provider>
   );
 }
 

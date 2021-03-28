@@ -13,7 +13,7 @@ const Review = () => {
     const history = useHistory()
 
     const handleProceedCheckout = () =>{
-        
+        history.push('/shipment')
     }
 
     const removeProduct = (productKey) =>{

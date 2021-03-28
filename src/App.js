@@ -9,6 +9,7 @@ import Header from './Component/Header/Header';
 import Inventory from './Component/Inventory/Inventory';
 import Login from './Component/Login/Login';
 import NotFound from './Component/NotFound/NotFound';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import ProductDetails from './Component/ProductDetails/ProductDetails';
 import Review from './Component/Review/Review';
 import Shipment from './Component/Shipment/Shipment';
@@ -22,8 +23,9 @@ function App() {
     
     <userContext.Provider value = {[loggedInUser ,  setLoggedInUser]}>
       <h3>Email : {loggedInUser.email}</h3>
-      <Header></Header>
+      
       <Router>
+      <Header></Header>
         <Switch>
             <Route path="/shop">
                 <Shop></Shop>
@@ -31,12 +33,12 @@ function App() {
             <Route path="/review">
                   <Review></Review>
             </Route>
-            <Route path="/inventory">
+            <PrivateRoute path="/inventory">
               <Inventory></Inventory>
-            </Route>
-            <Route path="/shipment">
+            </PrivateRoute>
+            <PrivateRoute path="/shipment">
               <Shipment />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
